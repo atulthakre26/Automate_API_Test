@@ -2,12 +2,12 @@ import requests
 
 para = {
     'page' : 1,
-    'per_page' : 10
+    'per_page' : 1
 }
 
 response = requests.get("https://gorest.co.in/public/v2/users", params= para)
 
 print(response.status_code)
-print(response.json())
+print(response.text)
 
 assert response.status_code == 200
